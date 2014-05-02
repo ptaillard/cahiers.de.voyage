@@ -7,9 +7,17 @@
   -o-box-shadow: 1px 1px 5px 0px #000;
   box-shadow: 1px 1px 5px 0px #000;
   filter:progid:DXImageTransform.Microsoft.Shadow(color=#000, Direction=134, Strength=5);
+
+  -webkit-transition: opacity .5s ease-in-out,padding .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out,padding .5s ease-in-out;
+  transition: opacity .5s ease-in-out,padding .5s ease-in-out;
+
+  -webkit-transition: padding .5s ease-in-out,padding .5s ease-in-out;
+  -moz-transition: padding .5s ease-in-out,padding .5s ease-in-out;
+  transition: padding .5s ease-in-out,padding .5s ease-in-out;
 }
 
-.navbar-accueil {
+.navbaraccueil {
   opacity: 0.6;
   font-size: 1.2em;
   padding-top: 30px;
