@@ -1,0 +1,24 @@
+<div class="content container">
+	<div class="row text-center">
+		<div class="panel panel-default transparent-white shadow">
+			<div class="panel-body">
+				<p class="lead">
+					<h1>Notre parcours</h1>
+				</p>
+				<br><br>
+				<br><br>
+				<p>Cliquez sur les marqueurs pour obtenir des informations complémentaires</p>
+				<google-map center="map.center" zoom="map.zoom" draggable="true">
+					<markers models="map.markers" coords="'self'" click="'onClicked'" fit='true' labelAnchor="22 0" labelClass="marker-labels">
+			            <windows isIconVisibleOnClick="false" closeClick="'closeClick'" ng-cloak>
+			                <b><p ng-non-bindable>{{title}}</p></b>
+			                <p ng-non-bindable>{{date}}
+			                <p ng-non-bindable class="muted"><i>{{information}}</i></p>
+			            </windows>
+			   		</markers>
+				</google-map>
+				<br><br>
+			</div>
+		</div>
+	</div>
+</div> 

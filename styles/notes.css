@@ -1,0 +1,7 @@
+#notes {
+	background-image:url('../images/media/background/notes.jpg');
+}
+
+#accordion {
+  overflow-y: auto;  
+}

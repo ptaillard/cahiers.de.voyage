@@ -1,0 +1,41 @@
+<div class="content container">
+	  <div class="row">
+		<div class="panel panel-default transparent-white">
+			<div class="panel-body text-center">
+				<p class="lead">
+					<h1>Notes et informations</h1>
+				</p>
+				<div class="panelFixed panel-group text-left" id="accordion">
+				  <div class="panel panel-default" ng-repeat="etape in etapes">
+				    <div class="panel-heading">
+				      <h4 class="panel-title">
+				        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{etape.id}}">
+				          <img width="30" height="30" ng-src="images/media/etapes/{{etape.image}}" alt="{{etape.title}}" class="img-rounded">  {{etape.title}} <small><i>{{etape.date}}</i></small>
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapse{{etape.id}}" class="panel-collapse collapse">
+				    	<dl class="dl-horizontal">
+					  		<dt>
+					  			<img ng-src="images/media/etapes/{{etape.image}}" alt="{{etape.title}}" class="img-thumbnail">
+					  		</dt>
+					  		<dd>
+					  			<ul class="list-group">
+							      	<li class="list-group-item"><b>Durée de l'étape:</b> {{etape.dateinfos}}</li>
+								    <li class="list-group-item">
+								    	<p class="text-info" >
+								    		<div ng-bind-html="etape.informations"><br/></div>
+								    	</p>
+								   	</li>
+								    <li class="list-group-item"><b>Hôtel réservé:</b> {{etape.hotel}}</li>
+							    </ul>
+					  		</dd>
+						</dl>
+				      	
+				    </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+{
+  "name": "cahiers-de-voyage",
+  "version": "0.0.0",
+  "homepage": "",
+  "authors": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-resource": "~1.2.14",
+    "angular-bootstrap": "~0.10.0",
+    "angular-route": "~1.2.14",
+    "bower-skrollr": "~0.6.21",
+    "jquery-waypoints": "~2.0.4",
+    "bootstrap": "~3.1.1",
+    "angular-directive.g-signin": "*",
+    "angular-ui-utils": "~0.1.1"
+  }
+}
