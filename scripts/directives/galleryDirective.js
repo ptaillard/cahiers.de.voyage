@@ -1,5 +1,5 @@
 var CahiersDeVoyageApp = CahiersDeVoyageApp || {};
-CahiersDeVoyageApp.directive('cdvParticipants', ['$window', function($window) {
+CahiersDeVoyageApp.directive('cdvGallery', [function() {
 		
 		return {
 			restrict: 'A',
