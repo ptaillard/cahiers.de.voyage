@@ -1,4 +1,4 @@
-var CahiersDeVoyageApp = angular.module('CahiersDeVoyageApp', ['ngSanitize', 'directives.skrollr', 'angularSmoothscroll', 'ngRoute', 'ui.bootstrap', 'ui.utils', 'google-maps'])
+var CahiersDeVoyageApp = angular.module('CahiersDeVoyageApp', ['ngAnimate', 'ngTouch', 'ngSanitize', 'directives.skrollr', 'angularSmoothscroll', 'ngRoute', 'ui.bootstrap', 'ui.utils', 'google-maps'])
 	.controller('CahiersDeVoyageCtrl', function($scope) {
 
 }).service('parcoursService', function(){

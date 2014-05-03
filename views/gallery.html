@@ -6,8 +6,26 @@
 					<h1>Gallerie de photos</h1>
 					<h4>Nous posterons de nouvelles photos tout au long de notre périple!</h4>
 				</p>
-				<br><br>
-				<br><br>
+				 <!-- slider container -->
+			    <div class="container slider">
+
+			        <!-- enumerate all photos -->
+			        <img ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
+
+
+			        <!-- prev / next controls -->
+			        <span class="arrow prev" ng-click="showPrev()"></span>
+			        <span class="arrow next" ng-click="showNext()"></span>
+
+			        <!-- extra navigation controls -->
+			        <ul class="navSlider">
+			            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+			                <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+			            </li>
+			        </ul>
+
+			    </div>
+
 				<!--div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				  
 				  <ol class="carousel-indicators">
