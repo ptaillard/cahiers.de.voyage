@@ -3,3 +3,16 @@
 }
 
 .angular-google-map-container { height: 600px; }
+
+@media (max-width: 1200px) {
+	.angular-google-map-container { height: 420px; }
+}
+
+@media (max-width: 992px) {
+	.angular-google-map-container { height: 300px; }
+}
+
+
+@media (max-width: 768px) {
+	.angular-google-map-container { height: 180px; }
+}

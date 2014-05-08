@@ -2,29 +2,63 @@
 	<div class="row text-center">
 		<div class="panel panel-default transparent-white shadow">
 			<div class="panel-body">
-				<p class="lead">
-					<h1>Gallerie de photos</h1>
-					<h4>Nous posterons de nouvelles photos tout au long de notre périple!</h4>
-				</p>
-				 <!-- slider container -->
-			    <div class="container slider">
+				<h1 class="visible-lg">Galerie de photos</h1>
+				<h2 class="visible-md">Galerie de photos</h2>
+				<h4 class="visible-sm visible-xs">Galerie de photos</h4>
+				<!--p>Nous posterons de nouvelles photos tout au long de notre périple!</p>
+				{{error}}-->
+				<div class="container">
+				    <div class="container slider slider-size">
 
-			        <!-- enumerate all photos -->
-			        <img ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
+				        <img ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()" ng-show="isActive($index)" ng-src="{{photo.src}}" />
 
+				        <span class="arrow prev" ng-click="showPrev()"></span>
+				        <span class="arrow next" ng-click="showNext()"></span>
 
-			        <!-- prev / next controls -->
-			        <span class="arrow prev" ng-click="showPrev()"></span>
-			        <span class="arrow next" ng-click="showNext()"></span>
-
-			        <!-- extra navigation controls -->
-			        <ul class="navSlider">
+				    </div>
+				    <blockquote>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+					  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+					</blockquote>
+				    <ul class="container navSlider navSlider-size">
+			            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+			                <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+			            </li>
+			            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+			                <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+			            </li>
+			            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+			                <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+			            </li>
+			            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+			                <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+			            </li>
+			            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+			                <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+			            </li>
+			            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+			                <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+			            </li>
+			            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+			                <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+			            </li>
+			            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+			                <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+			            </li>
+			            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+			                <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+			            </li>
+			            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+			                <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+			            </li>
+			            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
+			                <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
+			            </li>
 			            <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
 			                <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" />
 			            </li>
 			        </ul>
-
-			    </div>
+		    	</div>
 
 				<!--div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 				  

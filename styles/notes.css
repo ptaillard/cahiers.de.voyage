@@ -3,5 +3,27 @@
 }
 
 #accordion {
-  overflow-y: auto;  
+  overflow-y: auto;
+  height: 600px;
+}
+
+@media (max-width: 1200px) {
+	#accordion {
+	  overflow-y: auto;
+	  height: 450px;
+	}
+}
+
+@media (max-width: 992px) {
+	#accordion {
+	  overflow-y: auto;
+	  height: 300px;
+	}
+}
+
+@media (max-width: 768px) {
+	#accordion {
+	  overflow-y: auto;
+	  height: 180px;
+	}
 }
