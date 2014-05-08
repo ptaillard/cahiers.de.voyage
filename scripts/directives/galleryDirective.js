@@ -11,7 +11,7 @@ CahiersDeVoyageApp.directive('cdvGallery', [function() {
 
 				$scope.loadImages = function() {
 
-					$http.get('images.json').
+					$http.get('./ajax/gallery.php').
 						success(function(data, status, headers, config) {
 					      	$scope.photos = data;
 					    }).
@@ -22,6 +22,7 @@ CahiersDeVoyageApp.directive('cdvGallery', [function() {
 
 			    $scope._Index = 0;
 			    $scope.loadImages();
+
 
 			    $scope.isActive = function (index) {
 			        return $scope._Index === index;
