@@ -18,7 +18,7 @@
             $auteur = $row["auteur"];
           }
 
-          $files[] = array('src' => 'images/media/gallery/'.$src, 'desc' => $desc, 'auteur' => $auteur);
+          $files[] = array('src' => 'images/media/gallery/'.$src, 'file' => $src, 'desc' => $desc, 'auteur' => $auteur);
       }
   }
   

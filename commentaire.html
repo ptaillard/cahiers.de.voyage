@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="CommentaireApp">
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+      <title>L'Ouest Americain</title>
+      <meta name="description" content="Voyage aux Etats Unis: Amérique de l'ouest" />
+
+      <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <style>
+        .addcomment {
+          color: red;
+          font-weight: bold;
+        }
+      </style>
+
+  </head>
+  <body ng-controller="CommentaireCtrl">
+    <form role="form">
+      <div class="container text-center">
+        <h2>Ajout de commentaire</h2><br>
+        <p class="bg-success">{{ajout}}</p>
+        <select class="form-control" ng-model="photoSelect">
+          <option ng-repeat="photo in photos" ng-class="{addcomment: photo.desc == ''}">{{photo.file}}</option>
+        </select><br>
+        Commentaire:
+        <textarea class="form-control" rows="3" ng-model="commentaire"></textarea>
+        <br>
+        Auteur:
+        <input class="form-control" ng-model="auteur"></input>
+        <br>
+        <button type="button" class="btn btn-primary btn-block" ng-click="ajouter()">Ajouter</button>
+      </div>
+    </form>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-sanitize.js"></script>
+
+    <script src="scripts/commentaireApp.js"></script>
+
+  </body>
+</html>
