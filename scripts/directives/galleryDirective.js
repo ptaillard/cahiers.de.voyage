@@ -1,11 +1,13 @@
 var CahiersDeVoyageApp = CahiersDeVoyageApp || {};
-CahiersDeVoyageApp.directive('cdvGallery', [function() {
+CahiersDeVoyageApp.directive('cdvGallery', ['$timeout', function($timeout) {
 		
 		return {
 			restrict: 'A',
 			//transclude: 'element',
 			replace: true,
 			controller: function ($scope, $http) {
+				var timer;
+				var startedSlideshow = false;
 			    $scope.photos = [];
 
 
@@ -39,6 +41,31 @@ CahiersDeVoyageApp.directive('cdvGallery', [function() {
 			    $scope.showPhoto = function (index) {
 			        $scope._Index = index;
 			    };
+
+			    $scope.startSlideshow = function () {
+			    	startedSlideshow = true;
+			        slideshow();
+			    };
+
+			    $scope.stopSlideshow = function () {
+			        startedSlideshow = false;
+			        $timeout.cancel(timer);
+			    };
+
+			    $scope.isStartedSlideshow = function () {
+			        return startedSlideshow === true;
+			    };
+
+				var slideshow = function() {
+				  timer = $timeout(function() {
+				    $scope.showNext();
+				    timer = $timeout(slideshow, 1000);
+				  }, 1000);
+				};
+				 
+				$scope.$on('$destroy', function() {
+				  $scope.stopSlideshow(); // when the scope is getting destroyed, cancel the timer
+				});
 			},
 			templateUrl: './views/gallery.html'
 		};

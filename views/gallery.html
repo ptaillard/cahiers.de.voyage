@@ -5,6 +5,8 @@
 				<h1 class="visible-lg">Galerie de photos</h1>
 				<h2 class="visible-md">Galerie de photos</h2>
 				<h4 class="visible-sm visible-xs">Galerie de photos</h4>
+				<button class="btn btn-default" ng-show="isStartedSlideshow()" ng-click="stopSlideshow()">Arrêter le diaporama</button>
+				<button class="btn btn-default" ng-hide="isStartedSlideshow()" ng-click="startSlideshow()">Lancer le diaporama</button>
 				<!--p>Nous posterons de nouvelles photos tout au long de notre périple!</p>
 				{{error}}-->
 				<div ng-repeat="photo in photos" ng-show="isActive($index)" class="text-center">
