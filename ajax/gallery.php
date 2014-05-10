@@ -10,7 +10,7 @@
       if ($fileinfo->isFile()) {
           $src = $fileinfo->getFilename();
           $desc = $auteur = "";
-          $sql = "SELECT commentaire, auteur FROM `image_commentaire` WHERE image=\"".$src."\"";
+          $sql = "SELECT commentaire, auteur FROM `ouestamericain_commentaire` WHERE image=\"".$src."\"";
           $req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
 
           while ($row = mysql_fetch_assoc($req)) {

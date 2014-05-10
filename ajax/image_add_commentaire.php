@@ -11,7 +11,7 @@
   print $Comment;
   print $Auteur;
  
-  $sql = "INSERT into `image_commentaire` (image, commentaire, auteur) values(\"".$NomImage."\", \"".$Comment."\", \"".$Auteur."\") on DUPLICATE KEY UPDATE commentaire=\"".$Comment."\", auteur=\"".$Auteur."\"";
+  $sql = "INSERT into `ouestamericain_commentaire` (image, commentaire, auteur) values(\"".$NomImage."\", \"".$Comment."\", \"".$Auteur."\") on DUPLICATE KEY UPDATE commentaire=\"".$Comment."\", auteur=\"".$Auteur."\"";
   $req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
 
   exit(0);
