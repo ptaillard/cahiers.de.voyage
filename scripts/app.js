@@ -2,9 +2,9 @@ var CahiersDeVoyageApp = angular.module('CahiersDeVoyageApp', ['ngAnimate', 'ngT
 	.controller('CahiersDeVoyageCtrl', function($scope) {
 
 }).service('parcoursService', function(){
-    this.etapes = [
+    var informationParcours = [
                 {
-                	id: 1,
+                    id: 1,
                     latitude: 37.800165,
                     longitude: -122.433116,
                     title: 'San Francisco',
@@ -20,7 +20,7 @@ var CahiersDeVoyageApp = angular.module('CahiersDeVoyageApp', ['ngAnimate', 'ngT
                     image: 'sanfrancisco.jpg'
                 },
                 {
-                	id: 2,
+                    id: 2,
                     latitude: 34.844601,
                     longitude: -117.08438,
                     title: 'Barstow',
@@ -33,7 +33,7 @@ var CahiersDeVoyageApp = angular.module('CahiersDeVoyageApp', ['ngAnimate', 'ngT
                     image: 'calico.jpg'
                 },
                 {
-                	id: 3,
+                    id: 3,
                     latitude: 35.21126,
                     longitude: -114.016511,
                     title: 'Kingman',
@@ -45,7 +45,7 @@ var CahiersDeVoyageApp = angular.module('CahiersDeVoyageApp', ['ngAnimate', 'ngT
                     image: 'kingman.jpg'
                 },
                 {
-                	id: 4,
+                    id: 4,
                     latitude: 36.054598,
                     longitude: -112.119729,
                     title: 'Grand Canyon',
@@ -57,7 +57,7 @@ var CahiersDeVoyageApp = angular.module('CahiersDeVoyageApp', ['ngAnimate', 'ngT
                     image: 'grandcanyon.jpg'
                 },
                 {
-                	id: 5,
+                    id: 5,
                     latitude: 36.726365,
                     longitude: -110.254864,
                     title: 'Monument Valley',
@@ -71,7 +71,7 @@ var CahiersDeVoyageApp = angular.module('CahiersDeVoyageApp', ['ngAnimate', 'ngT
                     image: 'monumentvalley.jpg'
                 },
                 {
-                	id: 6,
+                    id: 6,
                     latitude: 36.916514,
                     longitude: -111.45511,
                     title: 'Page',
@@ -84,7 +84,7 @@ var CahiersDeVoyageApp = angular.module('CahiersDeVoyageApp', ['ngAnimate', 'ngT
                     image: 'page.jpg'
                 },
                 {
-                	id: 7,
+                    id: 7,
                     latitude: 37.674181,
                     longitude: -112.158279,
                     title: 'Bryce Canyon',
@@ -96,7 +96,7 @@ var CahiersDeVoyageApp = angular.module('CahiersDeVoyageApp', ['ngAnimate', 'ngT
                     image: 'brycecanyon.jpg'
                 },
                 {
-                	id: 8,
+                    id: 8,
                     latitude: 37.180193,
                     longitude: -113.006714,
                     title: 'Zion Canyon',
@@ -108,7 +108,7 @@ var CahiersDeVoyageApp = angular.module('CahiersDeVoyageApp', ['ngAnimate', 'ngT
                     image: 'zioncanyon.jpg'
                 },
                 {
-                	id: 9,
+                    id: 9,
                     latitude: 36.098181,
                     longitude: -115.167416,
                     title: 'Las Vegas',
@@ -120,7 +120,7 @@ var CahiersDeVoyageApp = angular.module('CahiersDeVoyageApp', ['ngAnimate', 'ngT
                     image: 'lasvegas.jpg'
                 },
                 {
-                	id: 10,
+                    id: 10,
                     latitude: 34.103339,
                     longitude: -118.340587,
                     title: 'Los Angeles',
@@ -133,6 +133,22 @@ var CahiersDeVoyageApp = angular.module('CahiersDeVoyageApp', ['ngAnimate', 'ngT
                     image: 'hollywood.jpg'
                 }
            ];
+
+    this.etapes = informationParcours;
+
+    this.polylines = [
+        {
+            path: informationParcours,
+            stroke: {
+                color: '#6060FB',
+                weight: 3
+            },
+            editable: true,
+            draggable: false,
+            geodesic: false,
+            visible: true
+        }
+    ];
 })
 .run(function() {
 });

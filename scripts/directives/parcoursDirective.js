@@ -1,6 +1,7 @@
 var CahiersDeVoyageApp = CahiersDeVoyageApp || {};
 CahiersDeVoyageApp.directive('cdvParcours', ['parcoursService', function($parcoursService) {
 		var etapes = $parcoursService.etapes;
+		var parcours = $parcoursService.polylines;
 		
 		return {
 			restrict: 'A',
@@ -15,7 +16,8 @@ CahiersDeVoyageApp.directive('cdvParcours', ['parcoursService', function($parcou
 				        longitude: -117.429064
 				    },
 				    zoom: 6,
-				    markers : etapes
+				    markers : etapes,
+				    polylines: parcours
 				};
 			},
 			templateUrl: './views/parcours.html'

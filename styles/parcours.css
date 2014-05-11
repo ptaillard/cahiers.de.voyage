@@ -2,7 +2,7 @@
 	background-image:url('../images/media/background/parcours.jpg');
 }
 
-.angular-google-map-container { height: 600px; }
+.angular-google-map-container { height: 500px; }
 
 @media (max-width: 1200px) {
 	.angular-google-map-container { height: 420px; }

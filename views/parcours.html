@@ -13,6 +13,9 @@
 			                <p ng-non-bindable class="muted"><i>{{information}}</i></p>
 			            </windows>
 			   		</markers>
+			   		<polyline ng-repeat="p in map.polylines" path="p.path" stroke="p.stroke" visible='p.visible'
+                  geodesic='p.geodesic' fit="false" editable="p.editable" draggable="p.draggable">
+              		</polyline>
 				</google-map>
 				<br><br>
 			</div>
