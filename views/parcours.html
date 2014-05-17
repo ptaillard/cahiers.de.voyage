@@ -6,13 +6,14 @@
 				<h2 class="visible-md">Notre parcours</h2>
 				<h4 class="visible-sm visible-xs">Notre parcours</h4>
 				<google-map center="map.center" zoom="map.zoom" draggable="true">
-					<markers models="map.markers" coords="'self'" click="'onClicked'" fit='true' labelAnchor="22 0" labelClass="marker-labels">
-			            <windows isIconVisibleOnClick="false" closeClick="'closeClick'" ng-cloak>
-			                <b><p ng-non-bindable>{{title}}</p></b>
-			                <p ng-non-bindable>{{date}}
-			                <p ng-non-bindable class="muted"><i>{{information}}</i></p>
-			            </windows>
-			   		</markers>
+					<marker ng-repeat="m in map.markers" coords="m" icon="m.icon" click="onMarkerClicked(m)">
+				    	<window ng-cloak show="m.showWindow" isIconVisibleOnClick="false" options="m.windowOptions">
+				    		<h6>{{m.title}} <small>{{$index+1}}/{{map.markers.length}}</small></h6> 
+			                <img width="50" height="50" ng-src="images/media/etapes/{{m.image}}" alt="{{m.title}}" class="img-rounded">
+			                <p>{{m.date}}</p>
+				    	</window>
+				  	</marker>
+					
 			   		<polyline ng-repeat="p in map.polylines" path="p.path" stroke="p.stroke" visible='p.visible'
                   geodesic='p.geodesic' fit="false" editable="p.editable" draggable="p.draggable">
               		</polyline>

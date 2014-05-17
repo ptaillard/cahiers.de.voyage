@@ -7,6 +7,10 @@ CahiersDeVoyageApp.directive('cdvNotes', ['parcoursService', function($parcoursS
 			replace: true,
 			controller: function ($scope) {
 				$scope.etapes = etapes;
+
+				$scope.informations = function(etape) {
+					return "views/parcours/" + etape.informations;
+				}
 			},
 			templateUrl: './views/notes.html'
 		};

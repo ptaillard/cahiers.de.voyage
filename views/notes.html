@@ -10,7 +10,7 @@
 				    <div class="panel-heading">
 				      <h4 class="panel-title">
 				        <a data-toggle="collapse" data-parent="#accordion" href="#collapse{{etape.id}}">
-				          <img width="30" height="30" ng-src="images/media/etapes/{{etape.image}}" alt="{{etape.title}}" class="img-rounded">  {{etape.title}} <small><i>{{etape.date}}</i></small>
+				          <img width="30" height="30" ng-src="images/media/etapes/{{etape.image}}" alt="{{etape.title}}" class="img-rounded"> <small>{{$index+1}}/{{etapes.length}}</small> {{etape.title}} <small><i>{{etape.date}}</i></small>
 				        </a>
 				      </h4>
 				    </div>
@@ -24,7 +24,7 @@
 							      	<li class="list-group-item"><b>Durée de l'étape:</b> {{etape.dateinfos}}</li>
 								    <li class="list-group-item">
 								    	<p class="text-info" >
-								    		<div ng-bind-html="etape.informations"><br/></div>
+								    		<div ng-include="informations(etape)"><br/></div>
 								    	</p>
 								   	</li>
 								    <li class="list-group-item"><b>Hôtel réservé:</b> {{etape.hotel}}</li>

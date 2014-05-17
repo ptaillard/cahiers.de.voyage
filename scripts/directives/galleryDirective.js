@@ -7,6 +7,7 @@ CahiersDeVoyageApp.directive('cdvGallery', ['$timeout', function($timeout) {
 			replace: true,
 			controller: function ($scope, $http) {
 				var timer;
+				var delay = 4000;
 				var startedSlideshow = false;
 			    $scope.photos = [];
 
@@ -59,8 +60,8 @@ CahiersDeVoyageApp.directive('cdvGallery', ['$timeout', function($timeout) {
 				var slideshow = function() {
 				  timer = $timeout(function() {
 				    $scope.showNext();
-				    timer = $timeout(slideshow, 1000);
-				  }, 1000);
+				    timer = $timeout(slideshow, delay);
+				  }, delay);
 				};
 				 
 				$scope.$on('$destroy', function() {
