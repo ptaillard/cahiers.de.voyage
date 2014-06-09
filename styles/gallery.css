@@ -13,14 +13,21 @@
     width: 64px;
     z-index: 5;
 }
+
+.glybig {
+    font-size: 5.0em;
+}
+
+.glymd {
+    font-size: 3.2em;
+}
+
 .arrow.prev {
-    background-image: url("../images/media/prev.png");
     left: 20px;
     opacity: 0.2;
     transition: all 0.2s linear 0s;
 }
 .arrow.next {
-    background-image: url("../images/media/next.png");
     opacity: 0.2;
     right: 20px;
     transition: all 0.2s linear 0s;
