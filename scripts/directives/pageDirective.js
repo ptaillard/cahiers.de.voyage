@@ -1,6 +1,6 @@
 var CahiersDeVoyageApp = CahiersDeVoyageApp || {};
 CahiersDeVoyageApp
-	.directive('cdvPage', [function() {	
+	.directive('cdvPage', ['pageService', function($pageService) {	
 		return {
 			restrict: 'A',
 			transclude: true,
@@ -18,8 +18,7 @@ CahiersDeVoyageApp
 				};
 
 				var updateMenuSelected = function() {
-					$scope.$parent.menuselected = $scope.idPage;
-					$scope.$parent.$apply();
+					$pageService.set($scope.idPage);
 				};
 			},
 			scope: {idPage:'@cdvPage',

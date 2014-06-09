@@ -15,19 +15,19 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-         <li smooth-scroll-jquery target="accueil" ng-class="{active: menuselected == 'accueil'}" ng-click="menuselected = 'accueil'">
+         <li smooth-scroll-jquery target="accueil" ng-class="{active: menuselected == 'accueil'}" ng-click="updateMenu('accueil')">
             <a>Accueil</a>
           </li>
-          <li smooth-scroll-jquery target="parcours" ng-class="{active: menuselected == 'parcours'}" ng-click="menuselected = 'parcours'" >
+          <li smooth-scroll-jquery target="parcours" ng-class="{active: menuselected == 'parcours'}" ng-click="updateMenu('parcours')" >
             <a>Parcours</a>
           </li>
-          <li smooth-scroll-jquery target="notes" ng-class="{active: menuselected == 'notes'}" ng-click="menuselected = 'notes'">
+          <li smooth-scroll-jquery target="notes" ng-class="{active: menuselected == 'notes'}" ng-click="updateMenu('notes')">
             <a>Etapes</a>
           </li>
-          <li smooth-scroll-jquery target="gallery" ng-class="{active: menuselected == 'gallery'}" ng-click="menuselected = 'gallery'">
+          <li smooth-scroll-jquery target="gallery" ng-class="{active: menuselected == 'gallery'}" ng-click="updateMenu('gallery')">
             <a>Galerie</a>
           </li>
-          <li smooth-scroll-jquery target="contact" ng-class="{active: menuselected == 'contact'}" ng-click="menuselected = 'contact'">
+          <li smooth-scroll-jquery target="contact" ng-class="{active: menuselected == 'contact'}" ng-click="updateMenu('contact')">
             <a>Contact</a>
           </li>
         </ul>

@@ -2,26 +2,39 @@
 	<div class="row text-center">
 		<div class="panel panel-default transparent-white shadow">
 			<div class="panel-body">
-				<h1 class="visible-lg">Galerie de photos</h1>
-				<h2 class="visible-md">Galerie de photos</h2>
-				<h4 class="visible-sm visible-xs">Galerie de photos</h4>
+				<h1 class="visible-lg">
+					Galerie de photos
+				</h1>
+				<h2 class="visible-md">
+					Galerie de photos
+				</h2>
+				<h4 class="visible-sm visible-xs">
+					Galerie de photos
+				</h4>
 				<button class="btn btn-default" ng-show="isStartedSlideshow()" ng-click="stopSlideshow()">Arrêter le diaporama</button>
-				<button class="btn btn-default" ng-hide="isStartedSlideshow()" ng-click="startSlideshow()">Lancer le diaporama</button>
+				<button class="btn btn-default" ng-hide="isStartedSlideshow()" ng-click="startSlideshow()">Lancer le diaporama</button><br><br>
+
 				<!--p>Nous posterons de nouvelles photos tout au long de notre périple!</p>
 				{{error}}-->
 				<div ng-repeat="photo in photos" ng-show="isActive($index)" class="text-center">
 				    <div class="container slider slider-size">
 
-				        <img class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext()"  ng-src="{{photo.src}}" />
+				        <img class="slide img-rounded" ng-swipe-right="showPrev()" ng-swipe-left="showNext()"  ng-src="{{photo.src}}" />
 
 				        <span class="arrow prev" ng-click="showPrev()"></span>
 				        <span class="arrow next" ng-click="showNext()"></span>
 
 				    </div>
-				    <blockquote class="container blockquote-size" ng-show="isActive($index)">
-					  <p>{{photo.desc}}</p>
-					  <footer>{{photo.auteur}}</footer>
-					</blockquote>
+				    <div class="row text-left">
+					    <div class="col-md-offset-2 col-md-8 blockquote-size" ng-show="isActive($index)">
+					    	<p>
+					    		{{photo.desc}}<small><i> -- {{photo.auteur}} -- </i></small>
+					    	</p>
+					    </div>
+					    <!--div class="col-md-2">
+					    	<button class="btn btn-default btn-sm">Ajouter un commentaire</button>
+					    </div-->
+				    </div>
 				    
 		    	</div>
 		    	<ul class="container navSlider navSlider-size">
