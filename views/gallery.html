@@ -25,7 +25,7 @@
 				        <span class="arrow next" ng-click="showNext()"></span>
 
 				    </div>
-				    <div class="row text-left">
+				    <div class="row text-center" ng-hide="photo.desc == ''">
 					    <div class="col-md-offset-2 col-md-8 blockquote-size" ng-show="isActive($index)">
 					    	<p>
 					    		{{photo.desc}}<small><i> -- {{photo.auteur}} -- </i></small>
