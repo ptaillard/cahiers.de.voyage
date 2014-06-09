@@ -19,6 +19,7 @@ CahiersDeVoyageApp
 
 				var updateMenuSelected = function() {
 					$pageService.set($scope.idPage);
+					$scope.$parent.$apply();
 				};
 			},
 			scope: {idPage:'@cdvPage',
